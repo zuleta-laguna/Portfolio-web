@@ -4,6 +4,7 @@ import TorknerImg from "/ProyectoTokner.png";
 import arrowDown from "/arrow-bar-down.svg";
 import videoRef from "/VideoReferenciaDev.mp4";
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 function App() {
   const [IsScrollingY, setIsScrollingY] = useState(false);
@@ -47,9 +48,9 @@ function App() {
       >
         <div className="flex justify-between items-center p-10 backdrop-blur-2xl  h-20 bg-white/80 w-full">
           <h2 className="font-Raleway text-xl  text-black">Wilberto Zuleta</h2>
-          <a className="font-Raleway text-xl text-black" href="Contactame">
+          <Link to="/contactame" className="font-Raleway text-xl text-black" >
             Contactame
-          </a>
+          </Link>
         </div>
       </header>
       <section className="flex justify-center mt-20 flex-col items-center h-screen max-[850px]:h-screen max-[423px]:h-screen">

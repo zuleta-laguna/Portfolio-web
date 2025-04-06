@@ -32,7 +32,7 @@ function Form() {
     <input type="text" name='user_namel' onChange={HandleChange} required placeholder='Nombre' className='outline-none bg-[#fff] w-[40%] max-[420px]:w-[80%] h-11 rounded-3xl p-5'/>
     <input type="email" name='user_email' onChange={HandleChange} required placeholder='Email' className='bg-[#fff] outline-none w-[40%] max-[420px]:w-[80%]
      h-11 rounded-3xl p-5'/>
-    <textarea name="message" onChange={HandleChange} required id="" placeholder='Mensaje' className='bg-[#fff] outline-none w-[40%] h-56  rounded-3xl p-5 resize-none max-[420px]:w-[80%]'></textarea>
+    <textarea name="message" onChange={HandleChange} required id="" placeholder='Mensaje' className='bg-[#fff]  outline-none w-[40%] h-56  rounded-3xl p-5 resize-none max-[420px]:w-[80%]'></textarea>
     <input className='cursor-pointer font-Raleway text-white bg-black outline-none w-[30%] h-11 rounded-3xl' type="submit" value="Enviar" />
    </form>
   )

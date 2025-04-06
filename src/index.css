@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap');
+@import "tailwindcss";
+
+body{
+    background-image: url("/BgBodyPortfolio.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@theme{
+    --font-Josefinsans: "Josefin Sans", sans-serif;
+    --font-Raleway: "Raleway", sans-serif;
+}

@@ -73,11 +73,7 @@ function App() {
             </h2>
             <br />
             <p className="font-Raleway text-xl max-[850px]:text-3xl max-[420px]:text-xl">
-              Desde que era niño me apasiona las computadoras y las tecnologias.
-              Tuve el privilegio de estudiar en una academia de desarrollo de
-              software llamada syntactic en mi ciudad (Valledupar,Cesar) donde
-              me enamore de esta carrera, Mis sueños es seguir creciendo
-              profesionalmente
+            Mi fascinación por las computadoras y la tecnología comenzó desde la infancia. Estudiar en una academia de desarrollo de software en mi ciudad natal, Valledupar, me hizo enamorarme aún más de esta profesión. Espero seguir creciendo.
             </p>
           </div>
           <div className="w-[30%]  self-end max-[840px]:self-auto  max-[420px]:w-full max-[850px]:w-[70%] max-[850px]:p-5">

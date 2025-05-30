@@ -1,6 +1,7 @@
 import Front_page_img from "/Front_page_image.png";
 import LinktreeImg from "/ProyectoLinktree.png";
 import TorknerImg from "/ProyectoTokner.png";
+import BarberShopImage from "/ProyectoBarberShop.png"
 import arrowDown from "/arrow-bar-down.svg";
 import videoRef from "/VideoReferenciaDev.mp4";
 import { useState, useEffect } from "react";
@@ -114,6 +115,18 @@ function App() {
                   className="text-white font-medium font-Raleway text-2xl w-full h-full flex justify-center items-center"
                 >
                   Tokner
+                </a>
+              </div>
+            </div>
+            <div className="relative border border-white rounded-[20px]">
+              <img src={BarberShopImage} alt="" />
+
+              <div className="bg-black/50 absolute bottom-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-100 cursor-pointer transition delay-100 ease-in-out duration-300">
+                <a
+                  href="https://zuleta-laguna.github.io/Barber-Shop/"
+                  className="text-white font-medium font-Raleway text-2xl w-full h-full flex justify-center items-center"
+                >
+                  BarberShop
                 </a>
               </div>
             </div>

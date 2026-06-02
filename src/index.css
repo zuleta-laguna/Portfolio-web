@@ -1,12 +1,331 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap');
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S+Guides:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(0, 0, 0);
+}
+main {
+  width: 100%;
+  height: auto;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+}
+a {
+  text-decoration: none;
+}
 
-body{
-    background-image: url("/BgBodyPortfolio.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+.Container {
+  position: relative;
+  width: 100%;
 }
-@theme{
-    --font-Josefinsans: "Josefin Sans", sans-serif;
-    --font-Raleway: "Raleway", sans-serif;
+.beams-container {
+position: relative; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;         
 }
+
+main {
+    position: absolute;
+   top: 0;
+}
+
+.Name_Logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 35px;
+}
+.NavbarDestock a {
+  margin-left: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  transition: color 0.3s ease;
+}
+.NavbarDestock a:hover {
+  color: rgb(158, 137, 137);
+}
+.NavbarMobile {
+  z-index: 0;
+  visibility: hidden;
+}
+.myself-picture {
+  width: 200px;
+}
+.myself-picture img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+.intro-Myself {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+.NameAndProfesion h2 {
+  font-size: 40px;
+  color: white;
+  font-family: "syncopate", sans-serif;
+}
+.NameAndProfesion p {
+  font-family: "raleway", sans-serif;
+  font-size: 30px;
+  color: rgb(255, 190, 190);
+  font-weight: 300;
+}
+.AboutMe {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+  margin-bottom: 10vh;
+}
+.Info-AboutMe {
+  width: 50%;
+}
+.Info-AboutMe h2 {
+  font-size: 35px;
+  font-family: "syncopate", sans-serif;
+  color: white;
+  font-weight: 500;
+}
+.Info-AboutMe p {
+  color: white;
+  font-family: "raleway", sans-serif;
+  font-size: 20px;
+}
+.Image-AboutMe {
+  width: 35%;
+}
+.Image-AboutMe img {
+  width: 100%;
+  mask-image: linear-gradient(black 85%, transparent);
+}
+.nameSkill p {
+  color: white;
+  font-family: "syncopate", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+.Skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+  justify-content: center;
+}
+.ProgressBar {
+  width: 400px;
+  height: 30px;
+  background-color: white;
+  border-radius: 20px;
+}
+.FillBar {
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  border-radius: 20px;
+  transition: width 2s ease-out;
+  position: relative;
+}
+.FillBar p {
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  color: white;
+  font-size: 20px;
+  font-family: "raleway", sans-serif;
+}
+.sectionSkill h2 {
+  color: white;
+  font-family: "raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.sectionsProjects h2 {
+  color: white;
+  font-family: "raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 100px;
+}
+.sectionsProjects p {
+  color: white;
+  font-family: "raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.CardProjects {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.project {
+  flex: 1 1 300px;
+  max-width: 30%;
+  height: 500px;
+  min-height: 600px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.project:hover {
+  background-color: rgb(8, 10, 26);
+}
+.project img {
+  width: 100%;
+}
+.techUsed {
+  color: rgb(255, 190, 190);
+}
+.FormSection {
+  margin-top: 100px;
+}
+.FormSection h2 {
+  color: white;
+  font-family: "raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 100px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+input {
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-family: "raleway", sans-serif;
+}
+textarea {
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  font-family: "raleway", sans-serif;
+}
+.ButtonSubmit {
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgb(109, 104, 104);
+  color: white;
+  font-family: "raleway", sans-serif;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+footer h2 {
+  color: white;
+  font-family: "syncopate", sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 760px) {
+  .NavbarDestock {
+    display: none;
+  }
+  header {
+    gap: 70px;
+  }
+  .Name_Logo {
+    font-size: 30px;
+  }
+  .intro-Myself {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .intro-Myself h2 {
+    font-size: 35px;
+  }
+  .myself-picture img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  .AboutMe {
+    flex-wrap: wrap;
+  }
+  .CardProjects {
+    gap: 180px;
+  }
+
+  .Info-AboutMe {
+    flex: 1 1 500px;
+  }
+  .Info-AboutMe p {
+    font-size: 25px;
+  }
+  .Image-AboutMe {
+    width: 90%;
+  }
+  .project p {
+    font-size: 25px;
+  }
+  .FormSection {
+    margin-top: 200px;
+  }
+  .project {
+    background-color: rgb(8, 10, 26);
+  }
+  .Name_Logo{
+    font-size: 40px;
+  }
+  .AboutMe{
+    padding: 20px;
+  }
+  .sectionSkill{
+    padding: 20px;
+  }
+  .sectionsProjects{
+    padding: 20px;
+  }
+  .FormSection{
+    padding: 20px;
+  }
+  .project{
+    min-width: 80%;
+  }
+}
+ 

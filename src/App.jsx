@@ -1,139 +1,170 @@
-import Front_page_img from "/Front_page_image.png";
-import LinktreeImg from "/ProyectoLinktree.png";
-import TorknerImg from "/ProyectoTokner.png";
-import BarberShopImage from "/ProyectoBarberShop.png"
-import arrowDown from "/arrow-bar-down.svg";
-import videoRef from "/VideoReferenciaDev.mp4";
-import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import React from "react";
+import Picture_myself from "./assets/IMG_8316.webp";
+import CodeImage from "./assets/CodeImage.webp";
+import { InView } from "react-intersection-observer";
+import MetalicaZuleta from "./assets/MetalicaZuleta.webp";
+import BarberShop from "./assets/BarberShop.webp";
+import Form from "./components/Form.jsx";
+import ListSvg from "./assets/list.svg";
+import Beams from "./components/Beams.jsx";
 
 function App() {
-  const [IsScrollingY, setIsScrollingY] = useState(false);
-
-  const HandleScrollChange = () => {
-    if (window.scrollY > 50) {
-      setIsScrollingY(true);
-    } else {
-      setIsScrollingY(false);
-    }
-  };
-
-  useEffect(() => {
-    HandleScrollChange();
-
-    window.addEventListener("scroll", HandleScrollChange);
-
-    return () => {
-      removeEventListener("scroll", HandleScrollChange);
-    };
-  }, []);
-
+  const Skills = [
+    {
+      name: "HTML",
+      level: 95,
+    },
+    {
+      name: "CSS",
+      level: 89,
+    },
+    {
+      name: "Javascript",
+      level: 80,
+    },
+    {
+      name: "React",
+      level: 87,
+    },
+    {
+      name: "Tailwind",
+      level: 90,
+    },
+    {
+      name: "Node js",
+      level: 70,
+    },
+    {
+      name: "PHP",
+      level: 70,
+    },
+  ];
   return (
-    <main>
-      <header
-        className={`fixed top-0 w-full ${IsScrollingY ? "hidden" : "visible"} `}
-      >
-        <div className="flex justify-between p-10  pt-7 w-full max-[423px]:p-2.5 max-[423px]:h-20 max-[423px]:items-center">
-          <h2 className="font-Raleway text-xl max-[420px]:text-xl max-[850px]:text-3xl">
-            Wilberto Zuleta
-          </h2>
-          <h2 className="font-Raleway text-xl max-[420px]:text-xl max-[850px]:text-3xl">
-            Software Developer
-          </h2>
-        </div>
-      </header>
-      <header
-        className={`fixed top-0 flex w-full  ${
-          IsScrollingY ? "visible " : "hidden"
-        }`}
-      >
-        <div className="flex justify-between items-center p-10 backdrop-blur-2xl  h-20 bg-white/80 w-full">
-          <h2 className="font-Raleway text-xl  text-black">Wilberto Zuleta</h2>
-          <Link to="/contactame" className="font-Raleway text-xl text-black" >
-            Contactame
-          </Link>
-        </div>
-      </header>
-      <section className="flex justify-center mt-20 flex-col items-center h-screen max-[850px]:h-screen max-[423px]:h-screen">
-        <div className="w-[30%] max-[423px]:w-[70%] max-[850px]:w-[50%]">
-          <img src={Front_page_img} alt="Front_page_img" />
-        </div>
-        <section className="p-3 flex w-full justify-between max-[850px]:mt-[300px] max-[420px]:mt-[180px]">
-          <a className="font-Raleway text-xl" href="#">
-            @wiltech.col
-          </a>
-          <img className="w-[2%] max-[423px]:w-[6%]" src={arrowDown} alt="" />
+    <section className="Container">
+    <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+    <Beams
+    beamWidth={3}
+    beamHeight={30}
+    beamNumber={20}
+    lightColor="#ffffff"
+    speed={2}
+    noiseIntensity={1.75}
+    scale={0.2}
+    rotation={30}
+  />
+  </div>
+      <main>
+        <header>
+          <p className="Name_Logo">Wilberto Zuleta</p>
+          <nav className="NavbarDestock">
+            <a href="#AboutMe">Acerca de mi</a>
+            <a href="#MyProjects">Proyectos</a>
+            <a href="#ContactMe">Contactame</a>
+          </nav>
+        </header>
+        <section className="intro-Myself">
+          <div className="myself-picture">
+            <img src={Picture_myself}  alt="" />
+          </div>
+          <div className="NameAndProfesion">
+            <h2>WILBERTO ZULETA</h2>
+            <p>Desarrollador de Full Stack</p>
+          </div>
         </section>
-      </section>
-
-      <section className="About_me_section max-[423px]:mt-14">
-        <div className="flex justify-around items-center h-screen max-[850px]:flex-col">
-          <div className="w-[30%] h-[350px] max-[850px]:w-[70%] max-[412px]:w-full max-[850px]:p-2.5">
-            <h2 className="font-Josefinsans font-light text-5xl max-[423px]:text-center max-[850px]:text-5xl max-[850px]:font-medium max-[420px]:font-light max-[420px]:text-4xl">
-              WILBERTO ZULETA
-            </h2>
-            <br />
-            <p className="font-Raleway text-xl max-[850px]:text-3xl max-[420px]:text-xl">
-            Mi fascinación por las computadoras y la tecnología comenzó desde la infancia. Estudiar en una academia de desarrollo de software en mi ciudad natal, Valledupar, me hizo enamorarme aún más de esta profesión. Espero seguir creciendo.
-            </p>
+      </main>
+      <div className="AboutMe" id="AboutMe">
+        <div className="Info-AboutMe">
+          <h2>¿Quien es Wilberto Zuleta?</h2>
+          <p>
+            Desarrollador Full Stack con 3 años de experiencia y una pasión por
+            la tecnología que me acompaña desde la infancia. Tras consolidar mi
+            formación en 2023, descubrí mi vocación por crear software. Me
+            caracterizo por ser una persona altamente responsable, comprometida
+            y con una sólida capacidad de aprendizaje rápido para dominar nuevas
+            herramientas de forma efectiva
+          </p>
+        </div>
+        <div className="Image-AboutMe">
+          <img src={CodeImage} alt="" />
+        </div>
+      </div>
+      <div className="sectionSkill">
+        <h2>Habilidades</h2>
+        <InView triggerOnce={true} threshold={0.2}>
+          {({ inView, ref }) => (
+            <div className="Skill" ref={ref}>
+              {Skills.map((items, key) => {
+                return (
+                  <div className="TechSkill" key={key}>
+                    <div className="nameSkill">
+                      <p>{items.name}</p>
+                    </div>
+                    <div className="ProgressBar">
+                      <span
+                        className="FillBar"
+                        style={{ width: inView ? `${items.level}%` : "0%" }}
+                      >
+                        {" "}
+                        <p>{items.level}%</p>
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </InView>
+      </div>
+      <div className="sectionsProjects" id="MyProjects">
+        <h2>Proyectos</h2>
+        <div className="CardProjects">
+          <div className="project">
+            <a href="https://metalica-zuleta-ii1jmpp4u-wilbertos-projects.vercel.app/">
+              <img src={MetalicaZuleta} alt="" />
+              <h2>Metalica Zuleta</h2>
+              <p>
+                Metalica Zuleta Una aplicacion funcional para encargar y elegir
+                los servicios que necesitas. <br />
+                tecnologias Usadas:{" "}
+                <span className="techUsed">
+                  React, Css, Javascript,React-router
+                </span>
+                <br />
+                <br />
+                <span>Hazme Click!!</span>
+              </p>
+            </a>
           </div>
-          <div className="w-[30%]  self-end max-[840px]:self-auto  max-[420px]:w-full max-[850px]:w-[70%] max-[850px]:p-5">
-            <video
-              className="shadow-black/50 shadow-2xl rounded-xl"
-              autoPlay
-              loop
-              muted
-            >
-              <source src={videoRef} type="video/mp4" />
-            </video>
+          <div className="project">
+            <a href="https://zuleta-laguna.github.io/Barber-Shop/">
+              <img src={BarberShop} alt="" />
+              <h2>BarberShop</h2>
+              <p>
+                BarberShop una interfaz de usuario basico en el cual puedes ver
+                los barberos disponibles y los precios de cada servicio
+                <br />
+                tecnologias Usadas: <span className="techUsed">
+                  React, css
+                </span>{" "}
+                <br />
+                <br />
+                <span>
+                  {" "}
+                  <span>Hazme Click!!</span>{" "}
+                </span>
+              </p>
+            </a>
           </div>
         </div>
-      </section>
-      <section className="bg-black mt-10 p-7">
-        <div className="flex flex-col items-center justify-center gap-28 h-screen">
-          <h2 className="text-white font-extralight font-Raleway text-6xl max-[423px]:text-center">
-            Mis Proyectos
-          </h2>
-          <div className="flex justify-center items-center gap-20 max-[423px]:flex-col max-[423px]:gap-5">
-            <div className="relative">
-              <img src={LinktreeImg} alt="" />
-              <div className="bg-black/50 absolute bottom-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-100 cursor-pointer transition delay-100 ease-in-out duration-300 ">
-                <a
-                  href="https://linktree-maizu.vercel.app/"
-                  className="text-white font-medium font-Raleway text-2xl w-full h-full flex justify-center items-center"
-                >
-                  Linktree
-                </a>
-              </div>
-            </div>
-            <div className="relative">
-              <img src={TorknerImg} alt="" />
-
-              <div className="bg-black/50 absolute bottom-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-100 cursor-pointer transition delay-100 ease-in-out duration-300">
-                <a
-                  href="https://torkner.vercel.app/"
-                  className="text-white font-medium font-Raleway text-2xl w-full h-full flex justify-center items-center"
-                >
-                  Tokner
-                </a>
-              </div>
-            </div>
-            <div className="relative border border-white rounded-[20px]">
-              <img src={BarberShopImage} alt="" />
-
-              <div className="bg-black/50 absolute bottom-0 h-full w-full flex justify-center items-center opacity-0 hover:opacity-100 cursor-pointer transition delay-100 ease-in-out duration-300">
-                <a
-                  href="https://zuleta-laguna.github.io/Barber-Shop/"
-                  className="text-white font-medium font-Raleway text-2xl w-full h-full flex justify-center items-center"
-                >
-                  BarberShop
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+      </div>
+      <div className="FormSection" id="ContactMe">
+        <h2>Contactame</h2>
+        <Form />
+      </div>
+      <footer>
+        <h2>Gracias Por Ver</h2>
+      </footer>
+    </section>
   );
 }
 
